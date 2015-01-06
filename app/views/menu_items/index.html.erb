@@ -1,0 +1,28 @@
+<h1>Listing menu_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+   <tbody>
+    <% @menu_items.each do |menu_item| %>
+      <tr>
+        <td><%= menu_item.item_name %></td>
+        <td><%= menu_item.item_description %></td>
+        <td><%= menu_item.item_cost %></td>
+        <td><%= link_to 'choose', '#', :onclick=>"check_menu(#{menu_item.id});return false;" %></td>
+        <td><%= check_box_tag "check_#{menu_item.id}", menu_item.id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>    
+  
+<%= link_to 'Create Order','#', :onclick=>"create_order();return false;" %>
+<%#= link_to 'checkout', Order.paypal_url(order_path(1)) %> 
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 
+  menu_item_id: 
+  count: 1
+  deliver_address: MyText
+  bill_total: 1
+
+two:
+  user_id: 
+  menu_item_id: 
+  count: 1
+  deliver_address: MyText
+  bill_total: 1
